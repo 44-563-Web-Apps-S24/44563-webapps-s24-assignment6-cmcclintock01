@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 6: Animals</title>
+    <h1>Animal Game by Corben McClintock</h1>
+</head>
+<body>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="hidden_animal">The hidden animal type</label>
+    <input type ="text" id="hidden_animal" name="hidden_animal" value="Chicken"> <br>
+
+    <label for="animal_guess">Guess the animal</label>
+    <input type ="text" id="animal_guess" name="animal_guess" autofocus> <br>
+
+    <input type="button" onclick="checkAnimal()" value="Check the guess">
+</form>
+
+
+<p id="result">Results: </p>
+
+<script> 
+
+let wrong = 0;
+let correct = 0;
+function checkAnimal (){
+    console.log("Getting form values")
+    animal = document.getElementById("hidden_animal").value
+    guess = document.getElementById("animal_guess").value
+    confirmed = animal.localeCompare(guess)
+    
+    out = document.getElementById("result")
+    if(confirmed == 0){
+        correct += 1
+        out.innerHTML = "Ruff Ruff Correct Count: "+correct+" Wrong Count: "+wrong
+    } else {
+        wrong += 1
+        out.innerHTML = "Grrrr Correct Count: "+correct+" Wrong Count: "+wrong
+    }
+}
+</script>
+
+</body>
+</html> 
