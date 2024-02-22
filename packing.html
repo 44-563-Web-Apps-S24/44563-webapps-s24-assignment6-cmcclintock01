@@ -18,7 +18,15 @@
 
     <input type="button" onclick="selectPack()" value="Select for packing">
 </form>
+<form>
+    <label for="month">Enter travel month</label>
+    <input type="text" id="month" name="month" value="May">
 
+    <lable for="price">Enter price </lable>
+    <input type="text" id="price" name="price">
+
+    <input type="button" onclick="updatePack()" value="Update the pack">
+</form>
 
 <p id="check_result">Checkbox Results </p>
 
@@ -44,6 +52,15 @@ function selectPack(){
     else {
         my_pack["tablet"] = false
     }    
+    
+    document.getElementById("check_result").innerHTML = my_pack
+}
+
+function updatePack(){
+    month_value = document.getElementById("month").value
+    price_value = document.getElementById("price").value
+    my_pack["month"] = month_value
+    my_pack["price"] = price_value
     document.getElementById("check_result").innerHTML = my_pack
 }
 </script>
