@@ -2,6 +2,6 @@
 # WebApps-S24-Assignment-6
 Introduction to Java Script and DOM
 
-Hosted at [animal.html](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-cmcclintock01/animal.html)
-Hosted at [discount.html](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-cmcclintock01/discount.html)
+Hosted at [animal.html](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-cmcclintock01/animal.html)\
+Hosted at [discount.html](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-cmcclintock01/discount.html)\
 Hosted at [packing.html](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-cmcclintock01/packing.html)
