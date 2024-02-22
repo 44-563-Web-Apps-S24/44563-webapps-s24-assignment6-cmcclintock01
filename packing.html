@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Packing Page: Assignment 6</title>
+</head>
+<body>
+
+<h2>Corben McClintock packs for a trip</h2>
+<form>
+    <label for="packlight">Pack light </label>
+    <input type ="checkbox" id="packlight" name="packlight" value="True"> <br>
+
+    <label for="carryon">Carry on </label>
+    <input type ="checkbox" id="carryon" name="carryon" value="True"> <br>
+
+    <label for="tablet">Tablet </label>
+    <input type="checkbox" id="tablet" name="tablet" value="False"> <br>
+
+    <input type="button" onclick="selectPack()" value="Select for packing">
+</form>
+
+
+<p id="check_result">Checkbox Results </p>
+
+<script> 
+var my_pack = {};
+function selectPack(){
+    my_pack = {};
+    if(document.getElementById("packlight").checked == true) {
+        my_pack["packlight"] = true
+    }
+    else {
+        my_pack['packlight'] = false
+    }
+    if(document.getElementById("carryon").checked == true) {
+        my_pack["carryon"] = true
+    }
+    else {
+        my_pack["carryon"] = false
+    }
+    if(document.getElementById("tablet").checked == true) {
+        my_pack["tablet"] = true
+    }
+    else {
+        my_pack["tablet"] = false
+    }    
+    document.getElementById("check_result").innerHTML = my_pack
+}
+</script>
+
+</body>
+</html> 
