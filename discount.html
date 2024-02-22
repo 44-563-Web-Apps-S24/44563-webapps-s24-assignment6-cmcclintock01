@@ -21,7 +21,20 @@
 </form>
 
 
-<p id="results">This text will be replaced </p>
+<p id="results">Discount Results</p>
+
+<form>
+    <input type="radio" id="sum" name="sum" value="sum" onclick="chooseOp()">
+    <label for="sum">sum</label></br>
+  
+    <input type="radio" id="mult" name="mult" value="multiply" onclick="chooseOp()">
+    <label for="mult">mult</label></br>
+  
+    <input type="radio" id="exp" name="exp" value="exponent" onclick="chooseOp()">
+    <label for="exp">exp</label></br>
+</form>
+
+<p id="radio_results">Radio Results</p>
 
 <script> 
 
@@ -44,6 +57,26 @@ function discounts(){
     }
 
 </script>
+<script>
+    
 
+function chooseOp(){
+    price_value = document.getElementById("price").value
+    discount_value = document.getElementById("discount").value
+    if(document.getElementById("sum").checked == true){
+        let string = "Sum of " + price_value + " and " + discount_value + " is " + (Number(price_value) + Number(discount_value))
+        document.getElementById("radio_results").innerHTML = string
+    }
+    if(document.getElementById("mult").checked == true){
+        let string = "Product of " + price_value + " and " + discount_value + " is " + (Number(price_value) * Number(discount_value))
+        document.getElementById("radio_results").innerHTML = string
+    }
+    if(document.getElementById("exp").checked == true){
+        let string = "Exponent of " + price_value + " to the " + discount_value + " is " + (Number(price_value) ** Number(discount_value))
+        document.getElementById("radio_results").innerHTML = string
+    }
+
+}
+</script>
 </body>
 </html> 
