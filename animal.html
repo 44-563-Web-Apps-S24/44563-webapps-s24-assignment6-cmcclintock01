@@ -20,7 +20,9 @@
 
 
 <p id="result">Results: </p>
-
+<div class="container" onclick="selectImage()">
+    <img id="image" src="coffee.png" height="150" width="150">
+</div>
 <script> 
 
 let wrong = 0;
@@ -40,6 +42,25 @@ function checkAnimal (){
         out.innerHTML = "Grrrr Correct Count: "+correct+" Wrong Count: "+wrong
     }
 }
+</script>
+<script>
+    let useImage = 1;
+    function selectImage (){
+        switch(useImage) {
+            case 1: 
+                document.getElementById("image").src="koolaidman.png" 
+                useImage=2;
+                break;
+            case 2: 
+                document.getElementById('image').src="mountaindew.png" 
+                useImage=3;
+                break;
+            case 3: 
+            document.getElementById('image').src="coffee.png" 
+            useImage=1;
+            break;
+        }
+    }
 </script>
 
 </body>
